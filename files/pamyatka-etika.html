@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Памятка по этике и данным</title>
+<style>
+:root{--bg:#fbf7f1;--paper:#fffdf9;--ink:#2b2520;--muted:#6b5f55;--accent:#9a4a2a;--accent2:#c98a5b;--line:#e6dccf;--soft:#f3e9dc}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,"Times New Roman",serif;font-size:18px;line-height:1.6}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:#6e3119}
+.wrap{max-width:740px;margin:0 auto;padding:0 16px 48px}
+header.top{background:var(--paper);border-bottom:1px solid var(--line)}
+header.top .wrap{padding:10px 16px}
+.crumbs{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+.crumbs a{color:var(--muted)}
+.crumbs .ws{font-weight:600;color:var(--ink)}
+nav.pn{display:flex;justify-content:space-between;gap:12px;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:15px;margin:28px 0 8px;flex-wrap:wrap}
+nav.pn a{display:inline-block;padding:10px 14px;background:var(--paper);border:1px solid var(--line);border-radius:10px;text-decoration:none;max-width:100%}
+nav.pn a.next{margin-left:auto}
+nav.pn span.lbl{display:block;font-size:12px;color:var(--muted)}
+h1{font-size:1.75rem;line-height:1.25;margin:28px 0 8px}
+h2{font-size:1.3rem;line-height:1.3;margin:36px 0 10px;color:var(--accent)}
+h3{font-size:1.08rem;margin:26px 0 6px}
+p{margin:0 0 14px}
+ul,ol{padding-left:22px;margin:0 0 14px}
+li{margin:0 0 8px}
+.kicker{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin:24px 0 0}
+.lead{font-size:1.12rem;color:#3c332c}
+.box{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--accent2);border-radius:10px;padding:14px 16px;margin:18px 0}
+.box p:last-child,.box ul:last-child,.box ol:last-child{margin-bottom:0}
+.note{background:var(--soft);border-radius:10px;padding:12px 16px;margin:18px 0;font-size:.98rem}
+.note p:last-child{margin-bottom:0}
+pre.prompt{white-space:pre-wrap;word-wrap:break-word;overflow-wrap:anywhere;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:14px 16px;font-family:inherit;font-size:.97rem;line-height:1.55;margin:0 0 10px}
+.copybar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:0 0 22px;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:14px}
+button.copy{font:inherit;font-size:14px;padding:8px 14px;border-radius:8px;border:1px solid var(--accent);background:var(--accent);color:#fff;cursor:pointer}
+button.copy:active{transform:translateY(1px)}
+button.copy.ok{background:#3a7d44;border-color:#3a7d44}
+table{border-collapse:collapse;width:100%;margin:0 0 18px;font-size:.95rem}
+th,td{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:var(--soft)}
+.tablewrap{overflow-x:auto;margin:0 0 18px}
+.tablewrap table{margin:0;min-width:420px}
+.toc{list-style:none;padding:0;margin:0}
+.toc li{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:0 0 8px}
+.toc li a{text-decoration:none;font-weight:600}
+.toc li .min{float:right;color:var(--muted);font-family:system-ui,sans-serif;font-size:13px;margin-left:8px}
+.toc li .sub{display:block;color:var(--muted);font-size:.93rem;margin-top:2px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 18px}
+.grid .cell{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:.95rem}
+.grid .cell b{display:block;margin-bottom:4px}
+@media (max-width:480px){.grid{grid-template-columns:1fr}body{font-size:17px}h1{font-size:1.5rem}}
+footer{margin-top:40px;padding-top:14px;border-top:1px solid var(--line);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:13px;color:var(--muted)}
+.files li{margin-bottom:12px}
+.files .what{display:block;color:var(--muted);font-size:.93rem}
+
+@media print{header.top,nav.pn,footer,.noprint{display:none} body{background:#fff;font-size:12pt} .wrap{max-width:none;padding:0}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><div class="crumbs"><a href="../index.html">Оглавление</a><a href="../zabrat.html">Что забрать с собой</a><span class="ws">ИИ не знает психодрамы. Научим?</span></div></div></header>
+<main class="wrap">
+
+<h1>Памятка по этике и данным</h1>
+<p class="lead">Одна страница. Для того, кто разбирает запись сессии вместе с нейросетью. Шаги идут в том порядке, в каком запись проходит путь до чата. Подробнее в <a href="../03-etika.html">блоке 3 мастерской</a>.</p>
+
+<h2>1. Закон и данные клиента</h2>
+<p>Запись и расшифровка сессии содержат личную информацию. В России с ней обращаются по закону о персональных данных (152-ФЗ), он касается и частного психолога. Закон защищает информацию, по которой можно узнать человека. Если расшифровка очищена так, что ни клиента, ни других людей из его истории узнать нельзя, это уже не персональные данные. Такой текст можно разбирать с помощью ИИ, в том числе зарубежного. Главное здесь качество обезличивания. Если обезличить полностью не получается, остаётся локальная модель на вашем компьютере. Это не юридическая консультация: если нужна юридическая точность, уточните у специалиста по персональным данным.</p>
+
+<h2>2. Согласие клиента</h2>
+<p>Обсуждают заранее и получают до включения записи. Согласие на запись и на использование ИИ оговаривают отдельно. Клиенту объясняют: какие инструменты используются; для чего; что происходит с данными (что передают, что удаляют до загрузки, где и сколько хранят, кто имеет доступ, когда удаляют); как защищается конфиденциальность и почему полностью исключить риск нельзя; как отказаться или отозвать согласие в любой момент без последствий для помощи, и что тогда будет с уже собранными материалами. Начинать с клиентов, которые сами пользуются ИИ, но знакомство с ИИ не заменяет информированного согласия. Не записывать и не использовать материалы вопреки отказу.</p>
+
+<h2>3. Запись сессии</h2>
+<p>Перед включением записи напомните клиенту. Если для разбора достаточно речи, записывайте только звук. Очно: место, где микрофон улавливает оба голоса, и пробная запись. Онлайн: нужны два источника звука, ваш микрофон и голос собеседника. Подходят встроенная запись видеосвязи или программа, которая сохраняет файл на компьютере (SoundTap для Windows, Piezo для Mac, OBS Studio). Храните записи в папке с ограниченным доступом и проверьте, не синхронизируется ли она с облаком.</p>
+
+<h2>4. Расшифровка записи</h2>
+<p>Для реальных сессий расшифровка на своём компьютере: приложение Buzz с Whisper, которое работает без интернета. Облачные сервисы (встроенные в Zoom и Google Meet, Any2Text, Transkriptor, Tactiq) удобны для знакомства на вымышленных диалогах и учебных записях. Условия обработки записи у каждого свои, их уточняют отдельно. Если расшифровываете регулярно, агент может настроить автоматический запуск после записи. Сверьте важные фрагменты с записью и проверьте, кому принадлежат реплики.</p>
+
+<h2>5. Обезличивание текста</h2>
+<p>Работайте с копией расшифровки. Что убрать или заменить:</p>
+<ul>
+<li>Имена клиента и всех упомянутых людей (клиентка Р1, терапевт Р2, остальные по ролям: [сестра], [коллега]).</li>
+<li>Контакты, города, места работы и учёбы, названия организаций.</li>
+<li>Точные даты, возраст, профессии.</li>
+<li>Узнаваемые подробности: редкие события, сочетание нескольких деталей, по которым человека вычислит знакомый.</li>
+</ul>
+<p>Способы, от простого к сложному: «Найти и заменить» в редакторе; локальная нейросеть (например LM Studio, без интернета); с помощью агента: замена по вашему списку или поиск имён (Natasha, spaCy), всё на вашем компьютере. Не обезличивайте в облачном чате, в том числе российском: сервис сначала получит полный текст, а GigaChat прямо запрещает отправлять персональные данные. Последний шаг делает человек: прочитайте текст и спросите себя, что помогло бы коллеге или соседу узнать здесь клиента. Если нужна одна сцена, подготовьте только её.</p>
+
+<h2>6. Загрузка текста в нейросеть</h2>
+<p>Текст обрабатывается на серверах компании и может там сохраняться. Шифрование защищает переписку от посторонних, но не делает её недоступной для самой компании. Доступ могут получать сотрудники и подрядчики, специалисты по улучшению модели, государственные органы по закону. Остаются риски: взлом аккаунта, ошибка сервиса, взлом компании, случайное раскрытие.</p>
+<ul>
+<li><b>Отключите обучение на переписках.</b> ChatGPT: Settings → Data controls → «Improve the model for everyone». Claude: Settings → Privacy → «Help Improve our AI models». В других сервисах ищите похожий переключатель. Он не удаляет историю.</li>
+<li><b>Временный чат,</b> если он есть: на обучение не идёт, но копия может сохраняться до 30 дней.</li>
+<li><b>Удаляйте обычные чаты после работы:</b> разбор сохраните у себя. Проверьте загруженные файлы и память сервиса.</li>
+<li><b>Защитите аккаунт:</b> отдельный пароль, подтверждение входа, проверка активных сеансов.</li>
+</ul>
+<p>Сроки хранения у сервисов разные (таблица в блоке 3). Настройки дополняют обезличивание, но не заменяют его.</p>
+
+<h2>7. Хранение и удаление</h2>
+<ul>
+<li>Аудиозапись: можно удалить после расшифровки, если в согласии не сказано иное.</li>
+<li>Расшифровка с именами: только у себя и не дольше, чем нужно для работы.</li>
+<li>Обезличенная расшифровка и разбор: рабочий материал, хранится как обычные записи о работе.</li>
+<li>Чат в нейросети: разбор сохранить у себя, разговор в сервисе удалить.</li>
+</ul>
+<p>Сроки хранения прописать в согласии. Компьютер и телефон с записями под паролем.</p>
+
+<h2>8. Ответственность и границы</h2>
+<p>Остаётся на специалисте. Модель не супервизор и не диагност. Всё, что она написала, материал для размышления, а не вывод о клиенте. Термины из подхода, в котором у вас нет подготовки, это повод учиться, а не применять.</p>
+
+<h2>Три правила проверки</h2>
+<ul>
+<li>Всё без цитаты это слова модели, а не факт встречи.</li>
+<li>Для каждого наблюдения: кто это сказал, клиент или терапевт.</li>
+<li>Последний шаг любого разбора: запрос В, самопроверка.</li>
+</ul>
+<p class="noprint"><i>Это не юридическая консультация.</i></p>
+
+<footer>Мастерская Анастасии Феоктистовой, конференция по психодраме, ноябрь 2026.</footer>
+</main>
+</body>
+</html>
